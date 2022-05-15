@@ -37,7 +37,7 @@ app.get("/message", function (request, response) {
   response.json(messages);
 });
 
-app.post("/message", function (request, response) {
+app.post("/messages", function (request, response) {
   const { from, text } = request.body;
 
   if (from === undefined || text === undefined) {
