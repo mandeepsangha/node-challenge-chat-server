@@ -62,7 +62,7 @@ app.delete("/message/:messageId", function (request, response) {
     (message) => message.id !== Number(messageId)
   );
 
-  if (messageIndex > -1) {
+  if (messageIndex > -1 || messageIndex > -2) {
     response.json(messages[messageIndex]);
     messages.splice(messageIndex, 1);
   } else {
